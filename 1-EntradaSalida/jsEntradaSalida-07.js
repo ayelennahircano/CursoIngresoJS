@@ -68,8 +68,10 @@ function dividir()
 	cociente=dividendo/divisor;
 	alert("La división es "+cociente);
 
+	//NaN da por ej por ingresar una palabra, olvidar el value.. 
+	//https://onlinegdb.com/Li0RNxsyx
+
 }
 
 
-//NaN da por ej por ingresar una palabra, olvidar el value.. 
-//https://onlinegdb.com/Li0RNxsyx
+

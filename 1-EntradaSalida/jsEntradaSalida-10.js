@@ -21,6 +21,8 @@ function mostrarAumento()
 
 	resultado = document.getElementById('txtIdResultado').value=resultado;
 
+	//https://onlinegdb.com/ryi4A_Fgd
+
 }
 
-//https://onlinegdb.com/ryi4A_Fgd
+

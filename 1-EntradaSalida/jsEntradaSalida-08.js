@@ -23,7 +23,9 @@ function SacarResto()
 	resto=dividendo%divisor;
 	alert("El resto es "+resto+" .");
 
+	//https://onlinegdb.com/rye-kZr_xd
+
 }
 
 
-//https://onlinegdb.com/rye-kZr_xd
+

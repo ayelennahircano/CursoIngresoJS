@@ -21,7 +21,8 @@ function mostrarAumento()
 	resultado = parseInt(resultado);
 	
 	resultado = document.getElementById('txtIdResultado').value=resultado;
+
+	//https://onlinegdb.com/HySDD_Yld
 	
 }
 
-//https://onlinegdb.com/HySDD_Yld
