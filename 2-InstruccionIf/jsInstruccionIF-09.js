@@ -4,3 +4,5 @@ function mostrar()
 	alert("ok");	
 
 }//FIN DE LA FUNCIÓN
+
+//y.scudero@sistemas-utnfra.com.ar

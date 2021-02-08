@@ -84,4 +84,6 @@ function Materiales ()
     totalCal = totalCal.toFixed(2);
 
     alert("Se necesitan "+totalCemento+" bolsas de cemento y "+totalCal+" bolsas de cal");
+
+    //https://onlinegdb.com/SyURzoRx_
 }

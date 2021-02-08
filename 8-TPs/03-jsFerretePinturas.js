@@ -40,4 +40,6 @@ function CentigradosFahrenheit ()
     resultadoF = resultadoF.toFixed(2);
 
     alert(temperaturaIngresada+"° Centígrados son "+resultadoF+"° Fahrenheit");
+
+    //https://onlinegdb.com/VDBeKFyRg
 }
