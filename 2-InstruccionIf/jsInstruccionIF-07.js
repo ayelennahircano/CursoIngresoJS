@@ -1,3 +1,10 @@
+/*
+Cano Ayelen Nahir
+Ejercicio if 08
+
+Al ingresar una edad menor a 18 años y un estado civil distinto a "Soltero", mostrar el siguiente mensaje: 'Es muy pequeño para NO ser soltero.'
+*/
+
 function mostrar()
 {
 	//tomo la edad  
@@ -14,8 +21,19 @@ function mostrar()
 		alert("Es muy pequeño para NO ser soltero");
 	}
 
-	alert("Fin del programa");
-	
+	/*o:
+	if(edad<18){
 
+		if(estadoCivil!="Soltero"){
+			
+			alert("Es muy pequeño para NO ser soltero");
+		}
+	}
+	
+	
+	
+	*/
+
+	alert("Fin del programa");
 
 }//FIN DE LA FUNCIÓN
