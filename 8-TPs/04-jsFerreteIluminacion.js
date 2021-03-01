@@ -27,9 +27,157 @@ function CalcularPrecio ()
 
     cantidadLamparas=parseInt(cantidadLamparas);
     precioLamparas = cantidadLamparas * 35;
-    precioLamparas=parseFloat(precioLamparas).toFixed(2);
+    precioLamparas=parseFloat(precioLamparas).toFixed(1);
 
-    if(cantidadLamparas>5){
+    //if de cantidad con switch de marca
+    if(cantidadLamparas>5)
+    {
+        descuento = 50;
+    }
+    else
+    {
+        if(cantidadLamparas==5)
+        {
+            switch(marcaLamparas)
+            {
+                case "ArgentinaLuz":
+                    descuento = 40;
+                    break;
+                default:
+                    descuento = 30;
+            }
+        }
+        else
+        {
+            if(cantidadLamparas==4)
+            {
+                switch(marcaLamparas)
+                {
+                    case "ArgentinaLuz":
+                    case "FelipeLamparas":
+                        descuento = 25;
+                        break;
+                    default:
+                        descuento = 20;
+                }
+            }
+            else
+            {
+                if(cantidadLamparas==3){
+                    switch(marcaLamparas)
+                    {
+                        case "ArgentinaLuz":
+                            descuento = 15;
+                            break;
+                        case "FelipeLamparas":
+                            descuento = 10;
+                            break;
+                        default:
+                            descuento = 5;
+                    }
+                }
+                else
+                {
+                    descuento = 0;
+                }
+            }
+        }
+    }
+    //Switch de cantidad con if de marca
+    /*switch(cantidadLamparas)
+    {
+        case 5:
+            if(marcaLamparas=="ArgentinaLuz")
+            {
+                descuento = 40;
+            }
+            else
+            {
+                descuento = 30;
+            }
+            break;
+        case 4:
+            if(marcaLamparas=="ArgentinaLuz" || marcaLamparas=="FelipeLamparas")
+            {
+                descuento = 25;
+            }
+            else
+            {
+                descuento = 20;
+            }
+            break;
+        case 3:
+            if(marcaLamparas=="ArgentinaLuz")
+            {
+                descuento = 15;
+            }
+            else
+            {
+                if(marcaLamparas=="FelipeLamparas")
+                {
+                    descuento = 10;
+                }
+                else
+                {
+                    descuento = 5;
+                }
+            }
+            break;
+        case 2:
+        case 1:
+        case 0:
+            descuento = 0;
+            break;
+        default:
+            descuento = 50;
+    }*/
+    //todo switch
+    /*switch(cantidadLamparas)
+    {
+        case 5:
+            switch(marcaLamparas)
+            {
+                case "ArgentinaLuz":
+                    descuento = 40;
+                    break;
+                default:
+                    descuento = 30;
+            }
+            break;
+        case 4:
+            switch(marcaLamparas)
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    descuento = 25;
+                    break;
+                default:
+                    descuento = 20;
+            }
+            break;
+        case 3:
+            switch(marcaLamparas)
+            {
+                case "ArgentinaLuz":
+                    descuento = 15;
+                    break;
+                case "FelipeLamparas":
+                    descuento = 10;
+                    break;
+                default:
+                    descuento = 5;
+            }
+            break;
+        case 2:
+        case 1:
+        case 0:
+            descuento = 0;
+            break;
+        default:
+            descuento = 50;
+    }*/
+    //todo if
+    /*if(cantidadLamparas>5){
         descuento = 50;
     }else{
         if(cantidadLamparas==5){
@@ -61,14 +209,14 @@ function CalcularPrecio ()
                 }
             }
             }
-        }
+        }*/
     precioDescuento = precioLamparas - (precioLamparas * descuento/100);
     if(precioDescuento>120){
         impuesto = 10;
         ingresosBrutos = precioDescuento/impuesto;
         precioDescuento = precioDescuento + ingresosBrutos;
-        alert("Usted pago " + ingresosBrutos + " de IIBB.");
+        alert("Usted pago $" + ingresosBrutos + " de IIBB.");
     }
-    precioDescuento=parseFloat(precioDescuento).toFixed(2);
-    precioDescuento=document.getElementById('txtIdprecioDescuento').value=precioDescuento;
+    precioDescuento=parseFloat(precioDescuento).toFixed(1);
+    precioDescuento=document.getElementById('txtIdprecioDescuento').value="$"+precioDescuento;
 }

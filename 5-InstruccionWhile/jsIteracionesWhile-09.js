@@ -1,21 +1,47 @@
 /*
+Cano Ayelen
+Ejercicio While 09
+
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
 {	// declarar variables
-	var banderaDelPrimero;
-	var numeroIngresado;
-	var numeroMaximo;
-	var numeroMinimo;
-	var respuesta;
+	let banderaDelPrimero;
+	let numeroIngresado;
+	let numeroMaximo;
+	let numeroMinimo;
+	let respuesta;
 	//iniciar variables
-	banderaDelPrimero="es el primero";
+	numeroMaximo=0;
+	numeroMinimo=0;
+	banderaDelPrimero=true;
 	respuesta='si';
 	while(respuesta=="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado = prompt("Ingrese un número");
+		numeroIngresado = parseInt(numeroIngresado);
+		if(banderaDelPrimero==true){
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+			banderaDelPrimero=false;
+		}
+		if(numeroIngresado>numeroMaximo){
+			numeroMaximo=numeroIngresado;
+		}
+		if(numeroIngresado<numeroMinimo){
+			numeroMinimo=numeroIngresado;
+		}
+		/*
+		if(banderaDelPrimero==true || numeroIngresado<numeroMinimo){
+			numeroMinimo=numeroIngresado;
+		}
+		if(banderaDelPrimero==true || numeroIngresado>numeroMaximo){
+			numeroMaximo=numeroIngresado;
+			banderaDelPrimero=false;
+		}
+		*/	
+		respuesta=prompt("desea continuar? Para continuar ingrese: si");
 	}
-	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	document.getElementById('txtIdMaximo').value="El máximo es: "+numeroMaximo;
+	document.getElementById('txtIdMinimo').value="El mínimo es: "+numeroMinimo;
 }//FIN DE LA FUNCIÓN
